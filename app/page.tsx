@@ -1,6 +1,3 @@
-// app/page.tsx
-"use client";
-
 import React from "react";
 import { Permanent_Marker, Lato } from "next/font/google";
 
