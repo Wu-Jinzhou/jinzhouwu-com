@@ -108,9 +108,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center">
+      <div className="absolute mt-10 bottom-10 left-0 right-0 flex flex-col items-center">
         {/* Under construction line */}
-        <p className={`mt-12 text-center ${lato.className} text-lg`}>
+        <p className={`text-center ${lato.className} text-lg`}>
           🏗️ This site is currently under construction.
         </p>
 
