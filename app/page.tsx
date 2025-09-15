@@ -92,7 +92,7 @@ export default function Home() {
               </div>
 
               {/* Bottom white area */}
-              <div className="bg-white text-black px-0 py-8 text-center">
+              <div className="bg-white text-black px-3 sm:py-8 text-center">
                 <div
                   className={`${marker.className} text-5xl sm:text-6xl md:text-7xl leading-tight`}
                   style={{
