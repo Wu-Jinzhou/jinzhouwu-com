@@ -3,7 +3,7 @@
 
 import React from "react";
 import Image from "next/image";
-import landscape from "../public/images/landscape.png";
+import landscape from "../public/images/landscape.jpg";
 
 function ArrowIcon() {
   return (
@@ -29,8 +29,11 @@ export default function NotFound() {
         <Image
           src={landscape}
           alt="Landscape"
+        //   width={1920}
+        //   height={600}
           className="w-full h-auto object-cover"
           priority
+          placeholder="blur"
         />
       </div>
       <div className="flex-grow flex flex-col items-center justify-center px-8 text-[#FAF9EE] font-[anziano]">

@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 export default function Home() {
   return (
     <div className="min-h-screen w-screen bg-[#FAF9EE] flex flex-col">
-      <header className="fixed top-0 left-0 w-full h-8 flex items-center justify-between bg-[#715A5A] px-8 z-10 font-[anziano]">
+      <header className="fixed top-0 left-0 w-full h-8 flex items-center justify-between bg-[#4E1F00] px-8 z-10 font-[anziano]">
         <span className="text-[#FAF9EE] text-lg">Jinzhou Wu</span>
         <nav className="flex gap-6">
           <a href="/about" className="text-[#FAF9EE]">
@@ -20,7 +20,7 @@ export default function Home() {
           </a>
         </nav>
       </header>
-      <main className="flex flex-col md:flex-row flex-grow pt-8">
+      <main className="flex flex-col md:flex-row flex-grow pt-8 relative">
         <div className="flex flex-1 items-center justify-center">
           <Image
             src={portrait}
@@ -68,8 +68,15 @@ export default function Home() {
             </p>
           </div>
         </div>
+        {/* Footer positioned absolutely on desktop only */}
+        <div className="hidden md:block absolute bottom-0 left-0 w-full">
+          <div className="flex justify-center px-6 md:px-12 pb-8 md:pb-0">
+            <Footer />
+          </div>
+        </div>
       </main>
-      <div className="flex justify-center px-6 md:px-12">
+      {/* Footer in normal flow on mobile */}
+      <div className="flex justify-center px-6 md:px-12 md:hidden">
         <Footer />
       </div>
     </div>
