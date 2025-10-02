@@ -2,122 +2,76 @@
 "use client";
 
 import React from "react";
-import { Permanent_Marker, Lato } from "next/font/google";
-
-const marker = Permanent_Marker({ subsets: ["latin"], weight: "400" });
-const lato = Lato({ subsets: ["latin"], weight: ["300", "400", "700"] });
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
-
-function Footer() {
-  return (
-    <footer>
-      <ul
-        className={`text-sm mt-4 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-6 md:space-y-0 ${lato.className}`}
-      >
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-600"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/Wu-Jinzhou"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-6">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-600"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/29.watson/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-6">instagram</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-600"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/jinzhouwu/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-6">linkedin</p>
-          </a>
-        </li>
-      </ul>
-    </footer>
-  );
-}
+import Image from "next/image";
+import portrait from "../public/images/portrait.png";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-stone-100 text-black flex flex-col items-center justify-center p-6">
-      {/* Sticker */}
-      <div
-        className="relative w-[300px] sm:w-[400px] md:w-[520px] select-none"
-        aria-label="Hello, my name is Jinzhou Wu sticker"
-      >
-        <div className="mx-auto -rotate-2">
-          {/* Red outline wrapper */}
-          <div className="rounded-[44px] bg-indigo-700 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
-            {/* Inner card */}
-            <div className="rounded-[40px] overflow-hidden">
-              {/* Top red band */}
-               <div className="bg-indigo-700 px-10 pt-1 pb-1 text-center">
-                <div className="text-5xl sm:text-6xl font-extrabold tracking-wide text-white leading-none">
-                  HELLO
-                </div>
-                <div className="mt-0 text-base sm:text-lg font-semibold uppercase tracking-[0.1em] text-white">
-                  my name is
-                </div>
-              </div>
-
-              {/* Bottom white area */}
-              <div className="bg-white text-black px-3 sm:py-8 text-center">
-                <div
-                  className={`${marker.className} text-5xl sm:text-6xl md:text-7xl leading-tight`}
-                  style={{
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                  }}
-                >
-                  Jinzhou Wu
-                </div>
-              </div>
-            </div>
+    <div className="min-h-screen w-screen bg-[#FAF9EE] flex flex-col">
+      <header className="fixed top-0 left-0 w-full h-8 flex items-center justify-between bg-[#715A5A] px-8 z-10 font-[anziano]">
+        <span className="text-[#FAF9EE] text-lg">Jinzhou Wu</span>
+        <nav className="flex gap-6">
+          <a href="/about" className="text-[#FAF9EE]">
+            About
+          </a>
+          <a href="/blog" className="text-[#FAF9EE]">
+            Blog
+          </a>
+        </nav>
+      </header>
+      <main className="flex flex-col md:flex-row flex-grow pt-8">
+        <div className="flex flex-1 items-center justify-center">
+          <Image
+            src={portrait}
+            alt="Portrait of Jinzhou Wu"
+            width={400}
+            height={400}
+            className="object-cover rounded-sm px-4 md:px-0 md:pl-12 lg:pl-0 mt-12 md:mt-0"
+            priority
+          />
+        </div>
+        <div className="flex flex-1 flex-col items-center md:items-start md:pl-12 lg:pl-0 md:pr-12 px-12 md:px-0 mt-12 md:mt-0 justify-start md:justify-center text-[#4E1F00]">
+          <h1 className="text-5xl font-bold mb-4 text-center md:text-left">
+            Jinzhou Wu
+          </h1>
+          <div className="space-y-3 text-md text-[#4E1F00] max-w-xl text-justify sm:text-left font-sans">
+            <p className="">
+              Hi! I’m a sophomore at Cornell University exploring the
+              intersections of technology, society, and humanity. I'm figuring
+              out how we can align advanced AI systems with human values—and, in
+              turn, what that alignment process reveals about those values
+              themselves.
+            </p>
+            <p className="">
+              The Romanian existentialist philosopher E. M. Cioran once wrote:
+              “There are questions which, once approached, either isolate you or
+              kill you outright.” For me, these questions are: as AI begins to
+              approach human-level intelligence and encroach on qualities once
+              thought to belong exclusively to us, what this shift means for our
+              sense of meaning, morality, and values, and how the resulting
+              absurdity invite new ways of life both at the individual and
+              collective levels.
+            </p>
+            <p className="">
+              Beyond academics and research, I enjoy hiking, sailing, diving,
+              and photo shooting. You can find me reading an existentialist
+              book, tinkering with the hidden layers of large language models,
+              or at{" "}
+              <a
+                href="mailto:jw2782@cornell.edu"
+                className="underline text-[#4E1F00]"
+              >
+                jw2782@cornell.edu
+              </a>
+              .
+            </p>
           </div>
         </div>
-      </div>
-
-      <div className="absolute mt-10 bottom-10 left-0 right-0 flex flex-col items-center">
-        {/* Under construction line */}
-        <p className={`text-center ${lato.className} text-lg`}>
-          🏗️ This site is currently under construction.
-        </p>
-
-        {/* Links */}
+      </main>
+      <div className="flex justify-center px-6 md:px-12">
         <Footer />
       </div>
-      
-    </main>
+    </div>
   );
 }
