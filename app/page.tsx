@@ -27,7 +27,7 @@ export default function Home() {
             alt="Portrait of Jinzhou Wu"
             width={400}
             height={400}
-            className="object-cover rounded-sm px-4 md:px-0 md:pl-12 lg:pl-0 mt-12 md:mt-0"
+            className="object-cover rounded-md px-4 md:px-0 md:pl-12 lg:pl-0 mt-12 md:mt-0"
             priority
           />
         </div>
@@ -45,18 +45,17 @@ export default function Home() {
             </p>
             <p className="">
               The Romanian existentialist philosopher E. M. Cioran once wrote:
-              “There are questions which, once approached, either isolate you or
-              kill you outright.” For me, these questions are: as AI begins to
-              approach human-level intelligence and encroach on qualities once
-              thought to belong exclusively to us, what this shift means for our
-              sense of meaning, morality, and values, and how the resulting
-              absurdity invite new ways of life both at the individual and
-              collective levels.
+              "There are questions which, once approached, either isolate you or
+              kill you outright." For me, these are questions about what it
+              means for humanity as AI approaches human-level intelligence and
+              encroaches on qualities once thought to belong exclusively to us.
+              I'm interested in how this shift challenges our sense of meaning,
+              morality, and values—and how the resulting absurdity might invite
+              new ways of life, both individual and collective.
             </p>
             <p className="">
               Beyond academics and research, I enjoy hiking, sailing, diving,
-              and photo shooting. You can find me reading an existentialist
-              book, tinkering with the hidden layers of large language models,
+              and photography. You can find me cooking up Chinese dishes, tinkering with the hidden layers of large language models,
               or at{" "}
               <a
                 href="mailto:jw2782@cornell.edu"
