@@ -12,6 +12,14 @@ export default function Home() {
       <header className="fixed top-0 left-0 w-full h-8 flex items-center justify-between bg-[#4E1F00] px-8 z-10 font-[anziano]">
         <span className="text-[#FAF9EE] text-lg">Jinzhou Wu</span>
         <nav className="flex gap-6">
+            <a
+            href="https://woods.jinzhouwu.com"
+            className="text-[#FAF9EE]"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            Woods
+            </a>
           <a href="/about" className="text-[#FAF9EE]">
             About
           </a>
